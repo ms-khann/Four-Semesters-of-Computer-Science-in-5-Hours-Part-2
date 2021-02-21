@@ -13,13 +13,9 @@ let tree = {
 };
 const preOrderReverse = (node, array) => {
     if (!node) return array;
-    debugger;
     array.push(node.value);
-    debugger;
     array = preOrderReverse(node.left, array);
-    debugger;
     array = preOrderReverse(node.right, array);
-    debugger;
     return array;
 };
 
@@ -39,11 +35,11 @@ const postOrderReverse = (node, array) => {
     return array;
 };
 
-const preOrderLoop = function(node){
+const preOrderLoop = function (node) {
     let arr = [];
-    while(node){
+    while (node) {
         arr.push(node.value);
-        node= node.left;
+        node = node.left;
     }
-}
-console.log(preOrderReverse(tree,[]));
+};
+console.log(preOrderReverse(tree, []));
